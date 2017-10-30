@@ -37,10 +37,23 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-    start: 'react-scripts start',
-    build: 'react-scripts build',
+    precommit: 'lint-staged',
+    'start-js': 'react-scripts start',
+    start: 'npm-run-all -p watch-css start-js',
+    build: 'npm run build-css && react-scripts build',
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
+    'build-css':
+      'node-sass-chokidar —include-path ./src —include-path ./node_modules src/ -o src/',
+    'watch-css':
+      'npm run build-css && node-sass-chokidar —include-path ./src —include-path ./node_modules src/ -o src/ —watch —recursive',
+  };
+
+  appPackage['lint-staged'] = {
+    'src/**/*.{js.jsx,json,css, scss}': [
+      'prettier --sing-quote --write',
+      'git add',
+    ],
   };
 
   fs.writeFileSync(
