@@ -1,24 +1,24 @@
 {
-  "name": "create-react-app",
+  "name": "caxy-create-react-app",
   "version": "1.4.1",
   "keywords": [
     "react"
   ],
   "description": "Create React apps with no build configuration.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "caxy/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=4"
   },
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/caxy/create-react-app/issues"
   },
   "files": [
     "index.js",
     "createReactApp.js"
   ],
   "bin": {
-    "create-react-app": "./index.js"
+    "caxy-create-react-app": "./index.js"
   },
   "dependencies": {
     "chalk": "^1.1.1",
