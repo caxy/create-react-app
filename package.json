@@ -1,6 +1,6 @@
 {
   "name": "caxy-create-react-app",
-  "private": true,
+  "version": "1.4.2",
   "scripts": {
     "build": "node packages/react-scripts/scripts/build.js",
     "changelog": "lerna-changelog",
